@@ -1,0 +1,200 @@
+@import 'base'
+@import 'components'
+
+//GENERAL
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: Helvetica
+    background-color: $bg-color
+
+//MAIN CONTAINER
+#main-container
+    display: flex
+    flex-direction: row
+    background-color: $bg-link-dark-blue
+    margin-top: 30px
+
+//CHILD CONTAINER
+.container-banner,
+.container-form
+    @include containers
+
+.container-banner
+    text-align: right
+
+    img
+        margin-right: 15px
+
+.container-form
+    text-align: center
+
+// LOGIN FORM
+#form-box
+    @include divisor
+    background-color: $bg-white
+    width: 350px
+    margin-top: 30px
+
+    #logo-insta
+        width: 175px
+        height: 51px
+        margin: 30px auto 12px
+        background: $bg-white
+
+    #login-form
+        margin-top: 20px
+        background-color:$bg-white
+
+        input
+            @include inputLayout
+            @include divisor
+            background-color: $bg-white
+
+        #button
+            @include buttonSubmit
+
+// SEPARATOR
+.separator
+    position: relative
+
+    .line
+        border-top: 1px solid $bg-light-gray
+        width: 268px
+        margin: 25px auto 35px
+
+    span
+        position: absolute
+        text-transform: uppercase
+        color: #BBB
+        width: 50px
+        top: -6px
+        left: 50%
+        margin-left: -25px
+        font-size: 14px
+        font-weight: bold
+
+//FACEBOOK LOGIN
+#facebook-login
+    margin-bottom: 25px
+
+    a
+        text-decoration: none
+        color: $bg-link-dark-blue
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $bg-white
+
+    img
+        width: 16px
+        height: 16px
+        margin-right: 8px
+    
+    span
+        font-weight: bold
+        font-size: 13px
+        margin-top: 1px
+
+#other-links
+    background-color: $bg-white
+
+//FORGOT PASSWORD
+
+#forgot-pass
+    margin-bottom: 20px
+    font-size: 12px
+    background-color: $bg-white
+
+    a 
+        text-decoration: none
+        color: #373799
+
+//REGISTRATION
+#register-container
+    @include divisor
+    backgroud-color: $bg-white
+    width: 350px
+    margin-top: 10px
+    padding: 25px
+
+    p
+        font-size: 14px
+        color: #262626
+
+    a
+        text-decoration: none
+        color: #4A95F6
+        font-weight: bold
+
+//APP
+#get-app-container
+    text-align: center
+    width: 350px
+
+    a
+        text-decoration: none
+
+    p
+        margin: 20px 0
+        font-size: 13px
+    
+    img
+        width: 136px
+        height: 40px
+
+//FOOTER
+footer
+    text-align: left
+    width: 1000px
+    margin: 170px auto
+
+    #copyright 
+        font-size: 12px
+        text-transform: uppercase
+        color: #8E8E8E
+        margin-top: 10px
+
+
+    #footer-links
+        list-style: none
+
+        li
+            display: inline-block
+            text-transform: uppercase
+            margin-right: 10px
+
+        a
+            text-decoration: none
+            color: gray
+            font-size: 12px
+            font-weight: bold
+
+//MOBILE
+.container-banner
+    @media (max-width:$small) 
+        display: none
+
+
+#main-container,
+#form-box
+     @media (max-width:$small) 
+        margin-top: 0
+
+
+.container-form,
+#form-box,
+#register-container,
+#get-app-container
+    @media (max-width:$small)
+        width: 100%
+        border: none
+
+footer
+     @media (max-width:$small)
+        width: 90%
+        text-align: center
+    
+
+
